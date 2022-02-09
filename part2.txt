@@ -1,0 +1,67 @@
+1. POST takes a .json as a param.
+
+2.GET returns a .json.
+
+3.https://practiceapi.devmountain.com/api/posts?id=555
+
+4.  /posts/filter:
+    get:
+      tags:
+      - Black Diamond
+      summary: Filter posts
+      parameters:
+      - in: query
+        name: text
+        description: The text to filter posts by
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        200:
+          description: Returns an array of filtered posts
+          schema:
+            $ref: '#/definitions/ApiReturn'
+        409:
+          description: Request query is missing required text property.
+
+5.	
+https://practiceapi.devmountain.com/api/posts
+Response body
+Download
+[
+  {
+    "id": 488,
+    "text": "Johnny-5",
+    "date": "09 Feb 2022"
+  }
+
+6.  {
+    "id": 488,
+    "text": "Johnny is now, very epic, great success!",
+    "date": "09 Feb 2022"
+  }
+  https://practiceapi.devmountain.com/api/posts?id=488
+7. {
+    "id": 474,
+    "text": "Blue",
+    "date": "31 Jan 2022"
+  }
+  https://practiceapi.devmountain.com/api/posts/filter?text=blue
+8.https://practiceapi.devmountain.com/api/posts
+get:
+      tags:
+      - posts
+      summary: Get all posts
+      produces:
+      - application/json
+      responses:
+        200:
+          description: Returns an array of all posts
+          schema:
+            $ref: '#/definitions/ApiReturn'
+
+charset is UTF-8
+content-type is application/json
+9. the request was missing a query. would give a 409
+10. My query went through, but it just gave me the whole posts object anyways. no error no nothing. I'd guess it's just because it defaults the url to just sending that response through the posts, because it's not through posts/filter.

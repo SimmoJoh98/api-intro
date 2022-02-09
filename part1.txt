@@ -1,0 +1,20 @@
+1) Vader height = 202cm
+2) alderaan pop. = 2000000000
+3) Corellian Engineering Corporation
+url for this if you wanted?
+https://swapi.dev/api/starships/10/
+I guess from now on I'll just keep the url pasted in here that I use.
+
+4)Droid - species
+https://swapi.dev/api/people/2/
+https://swapi.dev/api/species/2/
+
+5)all films below
+"https://swapi.dev/api/films/1/",
+                "https://swapi.dev/api/films/2/",
+                "https://swapi.dev/api/films/3/",
+                "https://swapi.dev/api/films/4/",
+                "https://swapi.dev/api/films/5/",
+                "https://swapi.dev/api/films/6/"
+
+6)https://swapi.dev/api/starships/?search=falcon
